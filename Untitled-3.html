@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    svg {
+        transform: rotate(-90deg);
+        background: linear-gradient(to right, #4ee3e0, #7a75eb);
+        border-radius: 50%;
+    }
+    circle {
+        fill: #58a;
+        stroke: #b6c9d1;
+        stroke-width: 100;
+        stroke-dasharray: 1 314;
+    }
+    .as{
+        transform: rotateY(180deg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 22;
+    }
+    .po{
+        z-index: 999;
+        position: absolute;
+        width: 150px;
+        margin: 17px;
+        height: 150px;
+    }
+    .text{
+        margin-top: 200px;
+        position: absolute;
+        margin-left: 45px;
+        color: #578aef;
+        font-size: 20px;
+    }
+    .text2{
+        margin-top: 230px;
+        position: absolute;
+        margin-left: 75px;
+        color: #578aef;
+    }
+</style>
+<body>
+    <div class="as">
+    <svg width="200" height="200">
+        <circle id="as" r="50" cx="100" cy="100"/>
+    </svg>
+</div>
+<img src="cc.png" alt="" class="po">
+<div class="text" id="loa">LOADING</div>
+<div class="text2" id="is">0%</div>
+</body>
+<script>
+    var i=314;
+    var sd=0;
+    var timer=setInterval(function(){
+        i--;
+        as.style.strokeDasharray=""+i+" 314"
+        is.innerHTML=100-parseInt(i/3.14)+"%";
+        if(i<=0){
+            clearInterval(timer)
+            location.href='https://www.baidu.com/'
+        }
+        sd++;
+        switch(sd){
+            case 10:
+            loa.innerHTML='LOADING.'
+            break;
+            case 20:
+            loa.innerHTML='LOADING..'
+            break;
+            case 30:
+            loa.innerHTML='LOADING...'
+            sd=0;
+            break;
+        }
+    },20)
+</script>
+</html>

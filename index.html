@@ -85,7 +85,7 @@
         </div>
         <img src="图层 4.png" alt="" class="image3" id="bacss">
     </div>
-    <div style="height: 20%;text-align: center;" onclick="xia()">
+    <div style="height: 20%;text-align: center;" id="xia">
         <img src="图层 3.png" alt="" class="image4" id="updown" >
     </div>
     <audio autoplay="autoplay" loop="loop" id="music" src="PIggy - 心动贩卖机.mp3"></audio>
@@ -109,8 +109,10 @@
             af()
         }
     },10)
-    function xia(){
-        setTimeout(function(){location.href='https://www.bilibili.com/'},1000)
+    xia.onmousedown=function(){
+        xia.onmousemove=function(){
+            setTimeout(function(){location.href='https://www.bilibili.com/'},500)
+        }
     }
     var up=4;
     function af(){

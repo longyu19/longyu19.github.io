@@ -8,9 +8,9 @@
 </head>
 <style>
     svg {
-        transform: rotate(-90deg);
-        background: linear-gradient(to right, #4ee3e0, #7a75eb);
-        border-radius: 50%;
+    transform: rotate(-90deg);
+    background: linear-gradient(to right, #4ee3e0, #7a75eb);
+    border-radius: 50%;
     }
     circle {
         fill: #58a;
@@ -21,29 +21,40 @@
     .as{
         transform: rotateY(180deg);
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 50%;
+        top: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
         z-index: 22;
     }
     .po{
         z-index: 999;
         position: absolute;
         width: 150px;
-        margin: 17px;
+        margin-top: -75px;
+        margin-left: -75px;
+        left: 50%;
+        top: 50%;
         height: 150px;
     }
     .text{
         margin-top: 200px;
         position: absolute;
-        margin-left: 45px;
         color: #578aef;
         font-size: 20px;
+        margin-top: 110px;
+        margin-left: -50px;
+        left: 50%;
+        top: 50%;
     }
     .text2{
         margin-top: 230px;
         position: absolute;
-        margin-left: 75px;
         color: #578aef;
+        margin-top: 135px;
+        margin-left: -19px;
+        left: 50%;
+        top: 50%;
     }
 </style>
 <body>
@@ -65,7 +76,7 @@
         is.innerHTML=100-parseInt(i/3.14)+"%";
         if(i<=0){
             clearInterval(timer)
-            location.href='https://www.bilibili.com/video/BV1k7411x7gA/?spm_id_from=333.337.search-card.all.click&vd_source=08e575707b1ca11e77f0f0b938d5088e'
+            location.href='https://longyu19.github.io/index2.html'
         }
         sd++;
         switch(sd){

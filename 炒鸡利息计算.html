@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炒鸡年金终值计算</title>
+</head>
+<style>
+    #as{
+        font-size: 50px;
+        color: rgb(234, 0, 255);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+       margin: 10px;
+    }
+    .juzhong{
+        background-color: aqua;
+        width: 400px;
+        height: 250px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .txt1{
+        font-size: 50px;
+        color:cornflowerblue;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="juzhong">
+        <div class="txt1">炒鸡年金终值计算</div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入每年存入数量：</div>
+            <input type="number" id="p1">元<br>
+        </div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入年数：</div>
+            <input type="number" id="p2">年<br>
+        </div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入年利率：</div>
+            <input type="text" id="p3">%<br>
+        </div>
+        <button onclick="jishu()">点击计算</button><br>
+        结果：<div id="as"></div>
+    </div>
+    <div class="juzhong" style="margin-top: 10px;background-color: aquamarine;">
+        <div class="txt1">炒鸡年利息计算</div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入存入数量：</div>
+            <input type="number" id="p4">元<br>
+        </div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入年数：</div>
+            <input type="number" id="p5">年<br>
+        </div>
+        <div style="display: flex;align-items: center;">
+            <div style="width: 145px;">输入年利率：</div>
+            <input type="text" id="p6">%<br>
+        </div>
+        <button onclick="jishu1()">点击计算</button><br>
+        结果：<div id="aa"></div>
+    </div>
+</body>
+<script>
+    function jishu(){
+        var a = parseFloat(document.getElementById("p1").value);
+        var b = parseFloat(document.getElementById("p2").value);
+        var c = parseFloat(document.getElementById("p3").value)/100;     
+        var zong = a * (Math.pow(1+c, b)-1) / c;
+        document.getElementById("as").innerHTML = zong.toFixed(2);
+    }
+    function jishu1(){
+        var a = parseFloat(document.getElementById("p4").value);
+        var b = parseFloat(document.getElementById("p5").value);
+        var c = parseFloat(document.getElementById("p6").value)/100;     
+        var zong = a + a  * (Math.pow(1+c, b)-1) 
+        document.getElementById("aa").innerHTML = zong.toFixed(2);
+    }
+</script>
+
+</html>

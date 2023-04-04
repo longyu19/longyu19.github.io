@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    svg {
+    transform: rotate(-90deg);
+    background: linear-gradient(to right, #4ee3e0, #7a75eb);
+    border-radius: 50%;
+    }
+    circle {
+        fill: #58a;
+        stroke: #b6c9d1;
+        stroke-width: 100;
+        stroke-dasharray: 1 314;
+    }
+    .as{
+        transform: rotateY(180deg);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        z-index: 22;
+    }
+    .po{
+        z-index: 999;
+        position: absolute;
+        width: 150px;
+        margin-top: -75px;
+        margin-left: -75px;
+        left: 50%;
+        top: 50%;
+        height: 150px;
+    }
+    .text{
+        margin-top: 200px;
+        position: absolute;
+        color: #578aef;
+        font-size: 20px;
+        margin-top: 110px;
+        margin-left: -50px;
+        left: 50%;
+        top: 50%;
+    }
+    .text2{
+        margin-top: 230px;
+        position: absolute;
+        color: #578aef;
+        margin-top: 135px;
+        margin-left: -19px;
+        left: 50%;
+        top: 50%;
+    }
+</style>
+<body>
+    <div class="as">
+    <svg width="200" height="200">
+        <circle id="as" r="50" cx="100" cy="100"/>
+    </svg>
+</div>
+<img src="images/圆形进度条/cc.png" alt="" class="po">
+<div class="text" id="loa">LOADING</div>
+<div class="text2" id="is">0%</div>
+</body>
+<script>
+    var i=314;
+    var sd=0;
+    var timer=setInterval(function(){
+        i--;
+        as.style.strokeDasharray=""+i+" 314"
+        is.innerHTML=100-parseInt(i/3.14)+"%";
+        if(i<=0){
+            clearInterval(timer)
+            location.href='https://longyu19.github.io/%E4%B8%8A%E6%8B%89.html'
+        }
+        sd++;
+        switch(sd){
+            case 10:
+            loa.innerHTML='LOADING.'
+            break;
+            case 20:
+            loa.innerHTML='LOADING..'
+            break;
+            case 30:
+            loa.innerHTML='LOADING...'
+            sd=0;
+            break;
+        }
+    },20)
+</script>
+</html>

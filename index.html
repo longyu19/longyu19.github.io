@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>煜</title>
+</head>
+<script src="jquery-3.6.1.js"></script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: '楷体';
+    }
+
+    .img1 {
+        width: 100%;
+        height: 1000px;
+        position: relative;
+        opacity: .5;
+        background-image: url('images/首页/background.png');
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+
+    .dbox1 {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 200px;
+        height: 1000px;
+        background-image: linear-gradient(to bottom, #ff8787, #695757);
+        opacity: .8; 
+    }
+    
+    .touxiang{
+        text-align: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+    .text1{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .lbox1{
+        width: 150px;
+        margin-top: 50px;
+        height: 430px;
+        margin-left: 44px;
+        background-color: aqua;
+    }
+    .lxbox1{
+        width: 100%;
+        height: 80px;
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+        text-align: center;
+        line-height: 80px;
+        font-size: 20px;
+    }
+    .lxbox2{
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        border: 3px solid black;
+        color: black;
+        text-align: center;
+        line-height: 80px;
+        font-size: 20px;
+    }
+    .lxbox2:hover{
+        width: 100%;
+        height: 80px;
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+        text-align: center;
+        line-height: 80px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .lbox2{
+        width: 500px;
+        height: 430px;
+        background-color: #999;
+        display: none;
+    }
+    .dbox2{
+        position: absolute;
+        left: 10%;
+        top: 293px;
+        opacity: .7;
+        margin-left: 210px;
+    }
+    .lxbox3{
+        width: 94px;
+        height: 94px;
+        border: 3px solid blue;
+        float: left;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-image: linear-gradient(to left, #00deff, #00ff8a);
+        text-align: center;
+        line-height: 94px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .lianjie1:hover{
+        color: white;
+        cursor: pointer;
+    }
+    .lianjie1{
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>
+<body style="background-color: black;">
+    <div class="img1"></div>
+    <div class="dbox1">
+        <img class="touxiang" src="images/首页/touxiang.png">
+        <div class="text1">煜🐟</div>
+        <div class="lbox1">
+            <div class="lxbox2 ona1">JavaScript特效</div>
+            <div class="lxbox2 ona1">CSS动画</div>
+            <div class="lxbox2 ona1">(未定)</div>
+            <div class="lxbox2 ona1">(未定)</div>
+            <div class="lxbox2 ona1">(未定)</div>
+        </div>
+    </div>
+    <div class="dbox2">
+        <div class="lbox2">
+            <div class="lxbox3"><a class="lianjie1" href="https://longyu19.github.io/%E4%B8%8A%E6%8B%89.html">圆形进度条</a></div>
+            <div class="lxbox3"><a class="lianjie1" href="https://longyu19.github.io/%E4%B8%8A%E6%8B%89.html">炒鸡利息计算</a></div>
+            <div class="lxbox3"><a class="lianjie1" href="https://longyu19.github.io/%E4%B8%8A%E6%8B%89.html">狗吧龙</a></div>
+        </div>
+        <div class="lbox2">
+            <!-- <div class="lxbox3">圆形进度条</div>
+            <div class="lxbox3">炒鸡利息计算</div>
+            <div class="lxbox3">狗吧龙</div> -->
+        </div>
+        <div class="lbox2">
+            <!-- <div class="lxbox3">圆形进度条</div>
+            <div class="lxbox3">炒鸡利息计算</div>
+            <div class="lxbox3">狗吧龙</div> -->
+        </div>
+        <div class="lbox2">
+            <!-- <div class="lxbox3">圆形进度条</div>
+            <div class="lxbox3">炒鸡利息计算</div>
+            <div class="lxbox3">狗吧龙</div> -->
+        </div>
+        <div class="lbox2">
+            <!-- <div class="lxbox3">圆形进度条</div>
+            <div class="lxbox3">炒鸡利息计算</div>
+            <div class="lxbox3">狗吧龙</div> -->
+        </div>
+    </div>
+</body>
+<script>
+    $('.ona1').click(function(){
+        $('.ona1').removeClass('lxbox1').addClass('lxbox2')
+        $(this).addClass('lxbox1').removeClass('lxbox2')
+        $('.lbox2').hide()
+        $('.lbox2').eq($('.ona1').index(this)).show();
+    })
+</script>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Document</title>
+</head>
+<style>
+    .backgr{
+        min-height:100vh;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        overflow: hidden;
+    }
+    .image1{
+        width: 100%;
+        position:fixed;top:0;left:0;
+        height: 100%;
+        min-width: 100%;
+        z-index: -10;
+    }
+    .image2{
+        width: 50%;
+        position: absolute;
+        left: 26%;
+        top: 25%;
+        z-index: 99;
+    }
+    .yuan{
+        width: 100%;
+        background-color: gray;
+        padding: 100% 0 0 0;
+        border-radius: 50%;
+        opacity: .5;
+        border: 2px solid white;
+    }
+    .box1{
+        width: 15%;
+        position: absolute;
+        right: 5%;
+        top: 2.5%;
+    }
+    .image3{
+        width: 50%;
+        height: 100%;
+        z-index: -10;
+    }
+    .image4{
+        width: 10%;
+        position: absolute;
+        bottom: 3%;
+        margin-left: -5%;
+        transition: 1s;
+    }
+    .text{
+        font-size: 50px;
+        width: 50px;
+    }
+    .box2{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -132px;
+    }
+
+</style>
+<body >
+<div class="backgr" id="hidee">
+    <div style="height: 20%;">
+        <div class="box1">
+            <img src="images/上拉/图层 2.png" alt="" class="image2" id="trss">
+            <div class="yuan"></div>
+        </div>
+    </div>
+    <div style="height: 60%;text-align: center;">
+        <div class="box2">
+            <div class="text">除</div>
+            <div class="text">夕</div>
+            <div class="text">快</div>
+            <div class="text">乐</div>
+        </div>
+        <img src="images/上拉/图层 4.png" alt="" class="image3" id="bacss">
+    </div>
+    <div style="height: 20%;text-align: center;" id="xia">
+        <img src="images/上拉/图层 3.png" alt="" class="image4" id="updown" >
+    </div>
+    <audio autoplay="autoplay" loop="loop" id="music" src="images/上拉/PIggy - 心动贩卖机.mp3"></audio>
+</div>
+<img class="image1" src="images/上拉/background.png" alt="" id="down">
+</body>
+<script>
+    var i=-100;
+    var textt=document.querySelectorAll('.text');
+    hidee.style.display='none';
+    var timerc=null;
+    var timer=setInterval(function(){
+        i++;
+        down.style.marginTop=i+'vh'
+        if(i==0){
+            clearInterval(timer);
+            hidee.style.display='block';
+            as()
+            ad()
+            ac()
+            af()
+        }
+    },10)
+    xia.onmousedown=function(){
+        xia.onmousemove=function(){
+            xia.onmouseup=function(){
+                setTimeout(function(){location.href='https://www.bilibili.com/'},500)
+            }
+        }
+    }
+    var up=4;
+    function af(){
+        setInterval(function(){
+            up--
+            updown.style.bottom=up+"%";
+            if(up==0){
+                up=5
+            }
+        },400)
+    }
+    var ix=0;
+    function ad(){
+        timerc=setInterval(function(){
+            ix++;
+            trss.style.transform="rotate("+ix+"deg)"
+        },10)
+    }
+    var n=0;
+    trss.onclick=function(){
+        n++;
+        if(n==1){
+        clearInterval(timerc)
+        music.pause();
+        }
+        else{
+            ad();
+            n=0;
+            music.play();
+        }
+    }
+    function ac(){
+        var o=0;
+        var timer=setInterval(function(){
+            o=o+0.005
+            bacss.style.opacity=o;
+            if(o==1){
+                clearInterval(timer)
+            }
+        },10)
+    }
+    function as(){
+        textt[0].style.display='-225px';
+        textt[1].style.display='175px';
+        textt[2].style.display='-225px';
+        textt[3].style.display='175px';
+        textt[1].style.display='none';
+        textt[2].style.display='none';
+        textt[3].style.display='none';
+        var i=-200;
+        var o=0;
+        var timer=setInterval(function(){
+            i++;
+            o=o+0.005
+            textt[0].style.marginLeft=i+'px';
+            textt[0].style.opacity=o;
+            if(i==-25){
+                clearInterval(timer)
+                aq();
+            }
+        },10)
+    }
+    function aq(){
+        var i=175;
+        var o=0;
+        textt[1].style.display='block';
+        var timer=setInterval(function(){
+            i--;
+            o=o+0.005
+            textt[1].style.opacity=o;
+            textt[1].style.marginLeft=i+'px';
+            if(i==-25){
+                clearInterval(timer)
+                aw();
+            }
+        },10)
+    }
+    function aw(){
+        textt[2].style.display='block';
+        var i=-200;
+        var o=0;
+        var timer=setInterval(function(){
+            i++;
+            o=o+0.005
+            textt[2].style.marginLeft=i+'px';
+            textt[2].style.opacity=o;
+            if(i==-25){
+                clearInterval(timer)
+                ae();
+            }
+        },10)
+    }
+    function ae(){
+        var i=175;
+        var o=0;
+        textt[3].style.display='block';
+        var timer=setInterval(function(){
+            i--;
+            o=o+0.005
+            textt[3].style.opacity=o;
+            textt[3].style.marginLeft=i+'px';
+            if(i==-25){
+                clearInterval(timer)
+            }
+        },10)
+    }
+</script>
+</html>
